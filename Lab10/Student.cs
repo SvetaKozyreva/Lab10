@@ -20,18 +20,15 @@ namespace Lab10
 
             public double Average()
             {
-                /*int sum = 0;
                 for (int i = 1; i <= Course; i++)
                 {
                     int x;
                     do
                     {
-                        Console.Write($"Ітогова оцінка по дисципліні No{i}(від 2 до 5): ");
                         x = int.Parse(Console.ReadLine());
                     } while (x < 2 || x > 5);
-                    sum += x;
                     Grades.Add(x);
-                }*/
+                }
                 return Grades.Sum() / Course;
             }
 
