@@ -1,4 +1,4 @@
-﻿namespace Student
+﻿namespace Lab10
 {
     partial class fStudent
     {
@@ -198,6 +198,7 @@
             btnOK.TabIndex = 1;
             btnOK.Text = "ОК";
             btnOK.UseVisualStyleBackColor = true;
+            btnOK.Click += btnOK_Click;
             // 
             // btnCancel
             // 
@@ -207,6 +208,7 @@
             btnCancel.TabIndex = 2;
             btnCancel.Text = "Скасувати";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // fStudent
             // 
