@@ -62,7 +62,7 @@
             btnAdd.ImageTransparentColor = Color.Magenta;
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(29, 24);
-            btnAdd.Text = "Додати запис про місто";
+            btnAdd.Text = "Додати запис";
             btnAdd.Click += btnAdd_Click;
             // 
             // btnEdit
