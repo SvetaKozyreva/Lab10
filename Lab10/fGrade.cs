@@ -23,6 +23,7 @@ namespace Lab10
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            tBCourse.ReadOnly = true;
             int x = int.Parse(tBGrade.Text);
             if (x >= 2 && x <= 5)
             {
@@ -33,9 +34,7 @@ namespace Lab10
                 if (_currentGradeIndex >= int.Parse(tBCourse.Text))
                 {
                     MessageBox.Show("Всі оцінки введені.");
-                    btnOK.Enabled = false;  // Деактивуємо кнопку OK
                     DialogResult = DialogResult.OK;
-                    Close();
                 }
             }
             else
@@ -44,20 +43,5 @@ namespace Lab10
                 tBGrade.Text = string.Empty;
             }
         }
-        /*for (int i = 1; i <= int.Parse(tBCourse.Text); i++)
-        {
-            int x;
-            do
-            {
-                x = int.Parse(tBGrade.Text);
-                if (x >= 2 && x <= 5)
-                {
-                    _student.Grades.Add(x);
-                }
-                tBGrade.Text = string.Empty;
-            } while (x < 2 || x > 5);
-        }
-        DialogResult = DialogResult.OK;*/
-
     }
 }

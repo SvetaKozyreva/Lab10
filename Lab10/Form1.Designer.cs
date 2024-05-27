@@ -39,10 +39,10 @@
             toolStripSeparator2 = new ToolStripSeparator();
             btnExit = new ToolStripButton();
             bindSrcStud = new BindingSource(components);
-            gvTowns = new DataGridView();
+            gvStudents = new DataGridView();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindSrcStud).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gvTowns).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gvStudents).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -51,7 +51,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnAdd, btnEdit, tsSeparator1, btnDel, btnClear, toolStripSeparator2, btnExit });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(945, 27);
+            toolStrip1.Size = new Size(890, 27);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -115,28 +115,28 @@
             btnExit.Text = "Вийти з програми";
             btnExit.Click += btnExit_Click;
             // 
-            // gvTowns
+            // gvStudents
             // 
-            gvTowns.AllowUserToAddRows = false;
-            gvTowns.AllowUserToDeleteRows = false;
-            gvTowns.AutoGenerateColumns = false;
-            gvTowns.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gvTowns.DataSource = bindSrcStud;
-            gvTowns.Dock = DockStyle.Fill;
-            gvTowns.Location = new Point(0, 27);
-            gvTowns.Name = "gvTowns";
-            gvTowns.ReadOnly = true;
-            gvTowns.RowHeadersWidth = 51;
-            gvTowns.Size = new Size(945, 423);
-            gvTowns.TabIndex = 1;
-            gvTowns.CellContentClick += gvTowns_CellContentClick;
+            gvStudents.AllowUserToAddRows = false;
+            gvStudents.AllowUserToDeleteRows = false;
+            gvStudents.AutoGenerateColumns = false;
+            gvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gvStudents.DataSource = bindSrcStud;
+            gvStudents.Dock = DockStyle.Fill;
+            gvStudents.Location = new Point(0, 27);
+            gvStudents.Name = "gvStudents";
+            gvStudents.ReadOnly = true;
+            gvStudents.RowHeadersWidth = 51;
+            gvStudents.Size = new Size(890, 423);
+            gvStudents.TabIndex = 1;
+            gvStudents.CellContentClick += gvTowns_CellContentClick;
             // 
             // fMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(945, 450);
-            Controls.Add(gvTowns);
+            ClientSize = new Size(890, 450);
+            Controls.Add(gvStudents);
             Controls.Add(toolStrip1);
             Name = "fMain";
             StartPosition = FormStartPosition.CenterScreen;
@@ -146,7 +146,7 @@
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bindSrcStud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gvTowns).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gvStudents).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,6 +162,6 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnExit;
         private BindingSource bindSrcStud;
-        private DataGridView gvTowns;
+        private DataGridView gvStudents;
     }
 }

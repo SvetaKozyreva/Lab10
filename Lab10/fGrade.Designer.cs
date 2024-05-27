@@ -32,13 +32,14 @@
             label1 = new Label();
             tBGrade = new TextBox();
             tBCourse = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // btnOK
             // 
-            btnOK.Location = new Point(143, 38);
+            btnOK.Location = new Point(49, 76);
             btnOK.Name = "btnOK";
-            btnOK.Size = new Size(52, 29);
+            btnOK.Size = new Size(119, 29);
             btnOK.TabIndex = 0;
             btnOK.Text = "OK";
             btnOK.UseVisualStyleBackColor = true;
@@ -47,7 +48,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(12, 43);
             label1.Name = "label1";
             label1.Size = new Size(111, 20);
             label1.TabIndex = 2;
@@ -55,23 +56,33 @@
             // 
             // tBGrade
             // 
-            tBGrade.Location = new Point(12, 38);
+            tBGrade.Location = new Point(129, 42);
             tBGrade.Name = "tBGrade";
-            tBGrade.Size = new Size(125, 27);
+            tBGrade.Size = new Size(66, 27);
             tBGrade.TabIndex = 3;
             // 
             // tBCourse
             // 
-            tBCourse.Location = new Point(129, 6);
+            tBCourse.Location = new Point(129, 9);
             tBCourse.Name = "tBCourse";
-            tBCourse.Size = new Size(35, 27);
+            tBCourse.Size = new Size(66, 27);
             tBCourse.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(89, 20);
+            label2.TabIndex = 5;
+            label2.Text = "К-ть оцінок";
             // 
             // fGrade
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(228, 86);
+            ClientSize = new Size(228, 117);
+            Controls.Add(label2);
             Controls.Add(tBCourse);
             Controls.Add(tBGrade);
             Controls.Add(label1);
@@ -88,5 +99,6 @@
         private Label label1;
         private TextBox tBGrade;
         private TextBox tBCourse;
+        private Label label2;
     }
 }

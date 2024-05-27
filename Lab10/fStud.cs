@@ -31,13 +31,12 @@ namespace Lab10
             {
                 _stud.AverageGrade = _stud.Average();
                 DialogResult = DialogResult.OK;
-                Close();
             }  
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

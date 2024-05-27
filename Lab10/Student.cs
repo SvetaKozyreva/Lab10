@@ -21,16 +21,7 @@ namespace Lab10
 
             public double Average()
             {
-                /*for (int i = 1; i <= Course; i++)
-                {
-                    int x;
-                    do
-                    {
-                        x = int.Parse(Console.ReadLine());
-                    } while (x < 2 || x > 5);
-                    Grades.Add(x);
-                }*/
-                return Grades.Sum() / Course;
+                return Math.Round(Grades.Sum() / (double)Course);
             }
 
             public Student()
