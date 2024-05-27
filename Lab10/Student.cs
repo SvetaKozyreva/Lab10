@@ -13,7 +13,6 @@ namespace Lab10
             public string University { get; set; }
             public string Specialty { get; set; }
             public int Course { get; set; }
-            public double AverageGrade { get; set; }
             public bool Livedorm { get; set; }
             public bool PaidFree { get; set; }
             public bool Contract { get; set; }
