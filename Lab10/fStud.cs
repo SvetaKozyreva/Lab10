@@ -26,8 +26,13 @@ namespace Lab10
             _stud.PaidFree = chBPaidFree.Checked;
             _stud.Contract = chBContract.Checked;
 
-            DialogResult = DialogResult.OK;
-            Close();
+            fGrade fg = new fGrade(ref _stud);
+            if (fg.ShowDialog() == DialogResult.OK)
+            {
+                _stud.AverageGrade = _stud.Average();
+                DialogResult = DialogResult.OK;
+                Close();
+            }  
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

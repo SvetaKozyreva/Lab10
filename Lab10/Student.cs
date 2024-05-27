@@ -12,15 +12,16 @@ namespace Lab10
             public int Age { get; set; }
             public string University { get; set; }
             public string Specialty { get; set; }
+            public double AverageGrade { get; set; }
             public int Course { get; set; }
             public bool Livedorm { get; set; }
             public bool PaidFree { get; set; }
             public bool Contract { get; set; }
-            public List<int> Grades = new List<int>();
+            public List<int> Grades { get; private set; } = new List<int>();
 
             public double Average()
             {
-                for (int i = 1; i <= Course; i++)
+                /*for (int i = 1; i <= Course; i++)
                 {
                     int x;
                     do
@@ -28,7 +29,7 @@ namespace Lab10
                         x = int.Parse(Console.ReadLine());
                     } while (x < 2 || x > 5);
                     Grades.Add(x);
-                }
+                }*/
                 return Grades.Sum() / Course;
             }
 
@@ -37,7 +38,7 @@ namespace Lab10
 
             }
 
-            public Student(string fullname, int age, string university, string specialty, int course, bool livedorm, bool paidFree, bool contract)
+            public Student(string fullname, int age, string university, string specialty, int course, bool livedorm, bool paidFree, bool contract, double average)
             {
                 Fullname = fullname;
                 Age = age;
@@ -47,6 +48,7 @@ namespace Lab10
                 Livedorm = livedorm;
                 PaidFree = paidFree;
                 Contract = contract;
+                AverageGrade = average;
             }
         }
     }

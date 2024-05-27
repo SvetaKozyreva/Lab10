@@ -55,12 +55,6 @@ namespace Lab10
             column.Width = 60;
             gvTowns.Columns.Add(column);
 
-            /*column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "AverageGrade";
-            column.Name = "Середня оцінка";
-            column.Width = 80;
-            gvTowns.Columns.Add(column);*/
-
             column = new DataGridViewCheckBoxColumn();
             column.DataPropertyName = "Livedorm";
             column.Name = "Гуртожиток";
@@ -79,8 +73,14 @@ namespace Lab10
             column.Width = 90;
             gvTowns.Columns.Add(column);
 
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "AverageGrade";
+            column.Name = "Середня оцінка";
+            column.Width = 80;
+            gvTowns.Columns.Add(column);
+
             // Bind a sample town data to the BindingSource
-            bindSrcStud.Add(new Student("Студент1", 18, "УМСФ", "ІПЗ", 5, false, true, false));
+            bindSrcStud.Add(new Student("Студент1", 18, "УМСФ", "ІПЗ", 5, false, true, false,5));
 
             // Trigger the resize event to adjust the layout if necessary
             EventArgs args = new EventArgs();
