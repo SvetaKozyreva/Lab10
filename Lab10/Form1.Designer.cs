@@ -38,10 +38,10 @@
             btnClear = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             btnExit = new ToolStripButton();
-            bindSrcTowns = new BindingSource(components);
+            bindSrcStud = new BindingSource(components);
             gvTowns = new DataGridView();
             toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bindSrcTowns).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindSrcStud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gvTowns).BeginInit();
             SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(29, 24);
             btnAdd.Text = "Додати запис про місто";
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnEdit
             // 
@@ -72,6 +73,7 @@
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(29, 24);
             btnEdit.Text = "Редагувати запис";
+            btnEdit.Click += btnEdit_Click;
             // 
             // tsSeparator1
             // 
@@ -86,6 +88,7 @@
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(29, 24);
             btnDel.Text = "Видалити запис";
+            btnDel.Click += btnDel_Click;
             // 
             // btnClear
             // 
@@ -95,6 +98,7 @@
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(29, 24);
             btnClear.Text = "Очистити дані";
+            btnClear.Click += btnClear_Click;
             // 
             // toolStripSeparator2
             // 
@@ -109,6 +113,7 @@
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(29, 24);
             btnExit.Text = "Вийти з програми";
+            btnExit.Click += btnExit_Click;
             // 
             // gvTowns
             // 
@@ -116,7 +121,7 @@
             gvTowns.AllowUserToDeleteRows = false;
             gvTowns.AutoGenerateColumns = false;
             gvTowns.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gvTowns.DataSource = bindSrcTowns;
+            gvTowns.DataSource = bindSrcStud;
             gvTowns.Dock = DockStyle.Fill;
             gvTowns.Location = new Point(0, 27);
             gvTowns.Name = "gvTowns";
@@ -140,7 +145,7 @@
             Resize += fMain_Resize;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)bindSrcTowns).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindSrcStud).EndInit();
             ((System.ComponentModel.ISupportInitialize)gvTowns).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -156,7 +161,7 @@
         private ToolStripButton btnClear;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnExit;
-        private BindingSource bindSrcTowns;
+        private BindingSource bindSrcStud;
         private DataGridView gvTowns;
     }
 }

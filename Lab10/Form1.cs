@@ -80,12 +80,61 @@ namespace Lab10
             gvTowns.Columns.Add(column);
 
             // Bind a sample town data to the BindingSource
-            bindSrcTowns.Add(new Student("Студент1", 18, "УМСФ", "ІПЗ", 5, 4, false, true, false));
+            bindSrcStud.Add(new Student("Студент1", 18, "УМСФ", "ІПЗ", 5, false, true, false));
 
             // Trigger the resize event to adjust the layout if necessary
             EventArgs args = new EventArgs();
             OnResize(args);
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Student student = new Student();
+
+            fStudent fs = new fStudent(ref student);
+            if (fs.ShowDialog() == DialogResult.OK)
+            {
+                bindSrcStud.Add(student);
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Student student = (Student)bindSrcStud.List[bindSrcStud.Position];
+
+            fStudent fs = new fStudent(ref student);
+            if (fs.ShowDialog() == DialogResult.OK)
+            {
+                bindSrcStud.List[bindSrcStud.Position] = student;
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Видалити поточний запис ?", "Видалення запису",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                bindSrcStud.RemoveCurrent();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Очистити таблицю?\n\nВсі дані будуть втрачені", "Очищення даних",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                bindSrcStud.Clear();
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Закрити застосунок?", "Вихід з програми",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }

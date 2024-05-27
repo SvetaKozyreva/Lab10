@@ -8,15 +8,15 @@ namespace Lab10
 {
     public class Student
     {
-            public string Fullname;
-            public int Age;
-            public string University;
-            public string Specialty;
-            public int Course;
-            public double AverageGrade;
-            public bool Livedorm;
-            public bool PaidFree;
-            public bool Contract;
+            public string Fullname { get; set; }
+            public int Age { get; set; }
+            public string University { get; set; }
+            public string Specialty { get; set; }
+            public int Course { get; set; }
+            public double AverageGrade { get; set; }
+            public bool Livedorm { get; set; }
+            public bool PaidFree { get; set; }
+            public bool Contract { get; set; }
             public List<int> Grades = new List<int>();
 
             public double Average()
@@ -41,14 +41,13 @@ namespace Lab10
 
             }
 
-            public Student(string fullname, int age, string university, string specialty, int course, double averageGrade, bool livedorm, bool paidFree, bool contract)
+            public Student(string fullname, int age, string university, string specialty, int course, bool livedorm, bool paidFree, bool contract)
             {
                 Fullname = fullname;
                 Age = age;
                 University = university;
                 Specialty = specialty;
                 Course = course;
-                AverageGrade = averageGrade;
                 Livedorm = livedorm;
                 PaidFree = paidFree;
                 Contract = contract;
